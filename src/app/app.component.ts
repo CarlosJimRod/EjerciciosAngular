@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'EjerciciosAngular';
+  textoBoton="Mostrar/Ocultar";
+  contenido = [["PRIMERO", "SEGUNDO"], ["TERCERO", "CUARTO"]]
+  mostrarOcultar (celda:string){
+    let parrafo = document.getElementById(celda)
+    let visible = parrafo!!.style.display
+    if (visible == 'none'){
+      parrafo!!.style.display = 'block'
+    }else{
+      parrafo!!.style.display = 'none'
+    }
+  }
 }
