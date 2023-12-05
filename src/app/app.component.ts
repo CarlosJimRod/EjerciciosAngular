@@ -9,12 +9,11 @@ export class AppComponent {
   textoBoton="Mostrar/Ocultar";
   contenido = [["PRIMERO", "SEGUNDO"], ["TERCERO", "CUARTO"]]
   mostrarOcultar (celda:string){
-    let parrafo = document.getElementById(celda)
-    let visible = parrafo!!.style.display
-    if (visible == 'none'){
-      parrafo!!.style.display = 'block'
+    let miParrafo = document.getElementById(celda)
+    if (miParrafo!!.style.display == 'none'){
+      miParrafo!!.style.display = 'block'
     }else{
-      parrafo!!.style.display = 'none'
+      miParrafo!!.style.display = 'none'
     }
   }
 }
