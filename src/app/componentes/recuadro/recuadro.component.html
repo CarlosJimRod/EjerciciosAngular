@@ -1,20 +1,24 @@
-<div class="row">
+<div class="row justify-content-center">
   <div class="col-sm-5 card shadow">
     <b>ALUMNOS DAM</b>
     <app-tabla [cabeceras]="cabeceras" [datos]="datosDAM"></app-tabla>
+    <app-boton (click)="clickOnButton('DAM')"></app-boton>
   </div>
   <div class="col-sm-5 card shadow">
     <b>ALUMNOS DAW</b>
     <app-tabla [cabeceras]="cabeceras" [datos]="datosDAM"></app-tabla>
+    <app-boton (click)="clickOnButton('DAW')"></app-boton>
   </div>
 </div>
-<div class="row">
+<div class="row justify-content-center">
   <div class="col-sm-5 card shadow">
     <b>ALUMNOS ASIR</b>
     <app-tabla [cabeceras]="cabeceras" [datos]="datosDAM"></app-tabla>
+    <app-boton (click)="clickOnButton('ASIR')"></app-boton>
   </div>
   <div class="col-sm-5 card shadow">
     <b>ALUMNOS...</b>
     <app-tabla [cabeceras]="cabeceras" [datos]="datosDAM"></app-tabla>
+    <app-boton (click)="clickOnButton('...')"></app-boton>
   </div>
 </div>

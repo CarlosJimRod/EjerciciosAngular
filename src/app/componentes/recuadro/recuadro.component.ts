@@ -1,16 +1,25 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CicloFromativoService} from "../../services/ciclo-fromativo.service";
+import {AlertService} from "../../services/alert.service";
 
 @Component({
   selector: 'app-recuadro',
   templateUrl: './recuadro.component.html',
   styleUrls: ['./recuadro.component.css']
 })
-export class RecuadroComponent {
+export class RecuadroComponent implements OnInit {
   cabeceras:string[]=["Nº","Alumno"]
-  datosDAM:any[]=[
-    {"Nº":"1","Alumno":"Daniel Andela Lopez"},
-    {"Nº":"2","Alumno":"Jose Maria Dorado Ruiz"},
-    {"Nº":"3","Alumno":"Natalia Cano Lopez"}
-  ]
 
+  constructor(private cicloformativoService: CicloFromativoService, private alertService: AlertService) {
+  }
+
+  datosDAM: any[] = []
+
+  clickOnButton(palabra: String) {
+    this.alertService.showAlert("Alumnos " + palabra)
+  }
+
+  ngOnInit() {
+    this.datosDAM = this.cicloformativoService.datosAlumnos
+  }
 }
